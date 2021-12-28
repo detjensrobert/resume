@@ -1,0 +1,214 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wenneker Resume/CV
+% LaTeX Template
+% Version 1.1 (19/6/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------
+
+\documentclass[12pt]{memoir} % Font and paper size
+
+\input{structure.tex} % Include the file specifying document layout and packages
+
+\usepackage{hyperref}
+\usepackage[fixed]{fontawesome5}
+
+%-------------------------------------------------------------------------------
+%  NAME AND CONTACT INFORMATION
+%-------------------------------------------------------------------------------
+
+\userinformation{ % Set the content that goes into the sidebar of each page
+  % Comment out this figure block if you don't want a photo
+  \begin{tikzpicture}
+    \clip (0,0) circle (0.5\columnwidth) node {\includegraphics[width=\columnwidth]{photo.jpg}};
+  \end{tikzpicture}
+
+  % \includegraphics[width=\columnwidth]{photo.jpg}
+  % \\ [\baselineskip]
+
+  \begin{flushright}
+
+  \textbf{Website} \faIcon{mouse-pointer} \\
+  \href{https://detjens.dev}{detjens.dev} \\
+
+  \Sep
+
+  \textbf{Email} \faIcon{envelope} \\
+  \href{mailto:robert@detjens.dev}{robert@detjens.dev} \\
+
+  \Sep
+
+  \textbf{Phone} \faIcon{phone} \\
+  925.550.8037 \\
+
+  \Sep
+
+  \textbf{Linkedin} \faIcon{linkedin} \\
+  \href{https://linkedin.com/detjensrobert}{detjensrobert} \\
+
+  \Sep
+
+  \textbf{Github} \faIcon{github} \\
+  \href{https://github.com/detjensrobert}{detjensrobert} \\
+
+  \Sep
+
+  \textbf{Gitlab} \faIcon{gitlab} \\
+  \href{https://gitlab.com/detjensrobert}{detjensrobert} \\
+
+  \Sep
+
+  % \textbf{Address} \faIcon{map-marker-alt} \\
+  % 123 Broadway \\
+  % Corvallis, OR 97330 \\
+  % Country \\
+
+  \vfill % Whitespace under this block to push it up under the photo
+
+  \end{flushright}
+}
+
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+\userinformation % Print your information in the left column
+
+\framebreak % End of the first column
+
+%-------------------------------------------------------------------------------
+%  HEADING
+%-------------------------------------------------------------------------------
+
+\cvheading{Robert Detjens} % Large heading - your name
+
+\cvsubheading{DevOps / Sysadmin} % Subheading - your occupation/specialization
+
+%-------------------------------------------------------------------------------
+%  EDUCATION
+%-------------------------------------------------------------------------------
+
+\CVSection{Education}
+
+%------------------------------------------------
+
+\CVItem{BS in Computer Science (Systems focus)}{
+  \textbf{Oregon State University}, 2018 - 2022 (est.) \\
+  Notable classes:
+  \begin{itemize}
+    \item CS 312: System Administration
+    \item CS 344/444: Operating Systems I / II
+    \item CS 361/362: Software Design I / II
+    \item CS 427: Cryptography
+  \end{itemize}
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%-------------------------------------------------------------------------------
+%  EXPERIENCE
+%-------------------------------------------------------------------------------
+
+\CVSection{Experience}
+
+%------------------------------------------------
+
+\CVItem{Student Systems Engineer}{
+  \href{https://osuosl.org}{\textbf{OSU Open Source Lab}}, Nov. 2019 - present
+  \begin{itemize}
+    \item Maintained Linux infrastructure fleet for hosting open-source projects
+    \item Responded to service tickets from customers
+    \item Developed Chef deployment suites to configure systems
+    \item Developed unit and suite testing with Chefspec \& Inspec
+    \item Provisioned virtualized infrastructure for projects with Openstack
+    \item Contributed to upstream community Chef cookbooks
+  \end{itemize}
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%-------------------------------------------------------------------------------
+%  EXTRACURRICULARS
+%-------------------------------------------------------------------------------
+
+\CVSection{Extracurriculars}
+
+%------------------------------------------------
+
+\CVItem{Club Vice President \& Treasurer}{
+  \href{https://lug.oregonstate.edu}{\textbf{OSU Linux Users Group}}, 2021 - 2022
+  \begin{itemize}
+    \item Coordinated with club members to plan events
+    \item Performed talks on Linux-related topics
+    \item Maintained club infrastructure (website, wiki, Matrix instance)
+  \end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{Club Member}{
+  \href{https://osusec.org}{\textbf{OSU Security Club}}, 2019 - 2022
+  \begin{itemize}
+    \item Competed in CTFs \& CDCs
+    \item High performer in NSA Codebreaker Challenge 2021 (Task 6)
+  \end{itemize}
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%-------------------------------------------------------------------------------
+%  SKILLS
+%-------------------------------------------------------------------------------
+
+\CVSection{Software Skills}
+
+%------------------------------------------------
+
+\CVItem{Programming Languages}{
+  \begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
+    \bluebullet Ruby & \bluebullet Python     & \bluebullet Shell  \\
+    \bluebullet C    & \bluebullet JavaScript & \bluebullet \LaTeX \\
+  \end{tabular}
+}
+
+%------------------------------------------------
+
+\CVItem{Software \& Tools}{
+  \begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
+    \bluebullet Chef      & \bluebullet Linux   & \bluebullet Git     \\
+    \bluebullet AWS EC2   & \bluebullet Apache  & \bluebullet GitHub  \\
+    \bluebullet OpenStack & \bluebullet Jenkins & \bluebullet HAProxy \\
+  \end{tabular}
+}
+
+%------------------------------------------------
+
+\CVItem{Linux Experience}{
+  \begin{tabular}{p{0.6\textwidth}}
+    \bluebullet 3 years server management (CentOS \& Ubuntu Server) \\
+    \bluebullet 6 years desktop use (Arch Linux \& Ubuntu)
+  \end{tabular}
+}
+
+%------------------------------------------------
+
+\end{document}
