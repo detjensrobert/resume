@@ -9,8 +9,8 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
-      - name: Add & Commit
+          root_file: resume.tex
+      - name: Commit built pdf
         uses: EndBug/add-and-commit@v7
         with:
           add: resume.pdf
