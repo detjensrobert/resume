@@ -10,9 +10,8 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: resume.tex
-      - name: Commit built pdf
-        uses: EndBug/add-and-commit@v7
+      - name: Upload PDF to release
+        uses: softprops/action-gh-release@v1
         with:
-          add: resume.pdf
-          default_author: github_actions
-          message: build resume
+          body: ${{ github.event.head_commit.message }}
+          files: resume.pdf
