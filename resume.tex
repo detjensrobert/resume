@@ -19,7 +19,7 @@
 %  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %-------------------------------------------------------------------------------
 
-\documentclass[12pt]{article} % Font and paper size
+\documentclass[11pt]{article} % Font and paper size
 
 \input{structure.tex} % Include the file specifying document layout and packages
 
@@ -32,14 +32,23 @@
 
 \userinformation{ % Set the content that goes into the sidebar of each page
   % Comment out this figure block if you don't want a photo
-  \begin{tikzpicture}
-    \clip (0,0) circle (0.5\columnwidth) node {\includegraphics[width=\columnwidth]{photo.jpg}};
-  \end{tikzpicture}
+  % \begin{tikzpicture}
+  %   \clip (0,0) circle (0.5\columnwidth) node
+  %   {\includegraphics[width=\columnwidth]{photo.jpg}};
+  % \end{tikzpicture}
 
   % \includegraphics[width=\columnwidth]{photo.jpg}
   % \\ [\baselineskip]
 
   \begin{flushright}
+
+  % \cvheading{Robert Detjens}
+  \cvheading{Robert}
+  \cvheading{Detjens}
+
+  % \cvsubheading{DevOps / Sysadmin} % Subheading - your occupation/specialization
+
+  \Sep
 
   \textbf{Website} \faIcon{mouse-pointer} \\
   \href{https://detjens.dev}{detjens.dev} \\
@@ -86,9 +95,8 @@
 %  HEADING
 %-------------------------------------------------------------------------------
 
-\cvheading{Robert Detjens} % Large heading - your name
-
-\cvsubheading{DevOps / Sysadmin} % Subheading - your occupation/specialization
+% \cvheading{Robert Detjens} % Large heading - your name
+% \cvsubheading{DevOps / Sysadmin} % Subheading - your occupation/specialization
 
 %-------------------------------------------------------------------------------
 %  EDUCATION
@@ -125,11 +133,11 @@
   \href{https://osuosl.org}{\textbf{OSU Open Source Lab}}, Nov. 2019 - present
   \begin{itemize}
     \item Maintained Linux infrastructure fleet for hosting open-source projects
-    \item Responded to service tickets from customers
+    \item Investigated and fixed customer infrastructure problems
     \item Developed Chef deployment suites to configure systems
-    \item Developed unit and suite testing with Chefspec \& Inspec
+    % \item Developed unit and suite testing with Chefspec \& Inspec
     \item Provisioned virtualized infrastructure for projects with Openstack
-    \item Contributed to upstream community Chef cookbooks
+    \item Greatly improved internal documentation and onboarding guides
   \end{itemize}
 }
 
@@ -145,12 +153,32 @@
 
 %------------------------------------------------
 
+\newcommand{\ghl}[2]{\href{https://github.com/#1}{#2}}
+
+\CVItem{Open Source Contributions}{
+  \ghl{sous-chefs}{\textbf{Sous Chefs Chef cookbooks}}
+  \begin{itemize}
+    \item \ghl{sous-chefs/yum/pull/195}{Added \texttt{dnf\_module}
+          resource to \texttt{yum}} to manage DNF module streams
+    \item Updated \texttt{yum-remi-chef} to
+          \ghl{sous-chefs/yum-remi-chef/pull/37}{support CentOS 8} and
+          \ghl{sous-chefs/yum-remi-chef/pull/40}{DNF modules}
+    \item Refactored \ghl{sous-chefs/nfs/pull/119}{\texttt{nfs}},
+          \ghl{schubergphilis/chef-acme/pull/128}{\texttt{chef-acme}}, and
+          \ghl{djoos-cookbooks/composer/pull/81}{\texttt{composer}} cookbooks
+          to use modern Chef features and compatibility
+  \end{itemize}
+}
+
+%------------------------------------------------
+
 \CVItem{Club Vice President \& Treasurer}{
   \href{https://lug.oregonstate.edu}{\textbf{OSU Linux Users Group}}, 2021 - 2022
   \begin{itemize}
     \item Coordinated with club members to plan events
     \item Performed talks on Linux-related topics
     \item Maintained club infrastructure (website, wiki, Matrix instance)
+    \item Developed deployment pipeline to automate website updates
   \end{itemize}
 }
 
@@ -162,7 +190,7 @@
     \item Set up on-demand AWS EC2 VM creation for members via Discord bot
     \item Competed in DOE Cyberforce CDC 2021 (1st regional, 7th overall)
     \item Competed in DEFCON CTF Qualifiers (22nd in 2020, 27th in 2021)
-    \item Participated in NSA Codebreaker Challenge 2021 (to Task 6)
+    % \item Competed in NSA Codebreaker Challenge 2021 (to Task 6)
   \end{itemize}
 }
 
@@ -174,34 +202,33 @@
 %  SKILLS
 %-------------------------------------------------------------------------------
 
-\CVSection{Software Skills}
+\CVSection{Skills}
 
 %------------------------------------------------
 
 \CVItem{Programming Languages}{
-  \begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
-    \bluebullet Ruby & \bluebullet Python     & \bluebullet Shell  \\
-    \bluebullet C    & \bluebullet JavaScript & \bluebullet \LaTeX \\
-  \end{tabular}}
+  \begin{tabular}{p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth}}
+    \bluebullet Ruby  & \bluebullet Python  & \bluebullet Shell  & \bluebullet C
+  \end{tabular}
+}
 
 %------------------------------------------------
 
 \CVItem{Software \& Tools}{
-  \begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
-    \bluebullet Chef      & \bluebullet Linux   & \bluebullet Git     \\
-    \bluebullet AWS EC2   & \bluebullet SystemD & \bluebullet GitHub  \\
-    \bluebullet OpenStack & \bluebullet Jenkins & \bluebullet HAProxy \\
+  \begin{tabular}{p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth}}
+    \bluebullet Chef      & \bluebullet Linux   & \bluebullet Git       & \bluebullet GitHub \\
+    \bluebullet AWS EC2   & \bluebullet Docker  & \bluebullet OpenStack & \bluebullet HAProxy
   \end{tabular}
 }
 
 %------------------------------------------------
 
-\CVItem{Linux Experience}{
-  \begin{tabular}{p{0.6\textwidth}}
-    \bluebullet 3 years server management (CentOS \& Ubuntu Server) \\
-    \bluebullet 6 years desktop use (Arch Linux \& Ubuntu)
-  \end{tabular}
-}
+% \CVItem{Linux Experience}{
+%   \begin{tabular}{p{0.6\textwidth}}
+%     \bluebullet 3 years server management (CentOS \& Ubuntu Server) \\
+%     \bluebullet 6 years desktop use (Arch Linux \& Ubuntu)
+%   \end{tabular}
+% }
 
 %------------------------------------------------
 
