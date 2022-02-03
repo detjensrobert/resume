@@ -21,10 +21,24 @@
 
 \documentclass[11pt]{article} % Font and paper size
 
+\newcommand{\accentcolor}{RoyalBlue}
+
 \input{structure.tex} % Include the file specifying document layout and packages
 
 \usepackage{hyperref}
-\usepackage[fixed]{fontawesome5}
+\usepackage{fontawesome5}
+
+\hypersetup{
+  pdftitle={Robert Detjens's Resume},
+  pdfauthor={Robert Detjens}
+}
+
+% some QOL macros to make links easier
+\newcommand{\gh}[1]{https://github.com/#1}
+\newcommand{\gl}[1]{https://gitlab.com/#1}
+\newcommand{\hreficon}[1]{\href{#1}{(\textcolor{\accentcolor}{\tiny \faLink})}}
+% \newcommand{\ghli}[1]{\ghl{#1}{(\textcolor{\accentcolor}{link})}}
+
 
 %-------------------------------------------------------------------------------
 %  NAME AND CONTACT INFORMATION
@@ -70,15 +84,13 @@
 
   \Sep
 
-  \textbf{Github} \faIcon{github} \\
-  \href{https://github.com/detjensrobert}{detjensrobert} \\
+  \textbf{GitHub} \faIcon{github} \\
+  \href{\gh{detjensrobert}}{detjensrobert} \\
 
   \Sep
 
-  \textbf{Gitlab} \faIcon{gitlab} \\
-  \href{https://gitlab.com/detjensrobert}{detjensrobert} \\
-
-  \vfill % Whitespace under this block to push it up under the photo
+  \textbf{GitLab} \faIcon{gitlab} \\
+  \href{\gl{detjensrobert}}{detjensrobert} \\
 
   \end{flushright}
 }
@@ -106,14 +118,13 @@
 
 %------------------------------------------------
 
-\CVItem{BS in Computer Science (Systems focus)}{
-  \textbf{Oregon State University}, 2018 - 2022 (est.) \\
+\CVItem{BS in Computer Science (Systems option)}{
+  \textbf{Oregon State University}, 2018 - 2022 \\
   3.48 GPA | Notable classes:
   \begin{itemize}
     \item CS 312: System Administration
     \item CS 344/444: Operating Systems I / II
     \item CS 361/362: Software Design I / II
-    \item CS 427: Cryptography
   \end{itemize}
 }
 
@@ -132,12 +143,13 @@
 \CVItem{Student Systems Engineer}{
   \href{https://osuosl.org}{\textbf{OSU Open Source Lab}}, Nov. 2019 - present
   \begin{itemize}
-    \item Maintained Linux infrastructure fleet for hosting open-source projects
+    \item Developed Chef cookbook suites to configure systems
+    \item Maintained network of CentOS systems for hosting open-source projects
+    % \item Racked and installed physical servers in data center
+    \item Provisioned physical infrastructure for projects using Openstack
+    \item Refactored and improved internal documentation and onboarding guides
     \item Investigated and fixed customer infrastructure problems
-    \item Developed Chef deployment suites to configure systems
-    % \item Developed unit and suite testing with Chefspec \& Inspec
-    \item Provisioned virtualized infrastructure for projects with Openstack
-    \item Greatly improved internal documentation and onboarding guides
+    \item Developed unit and integration testing suites with ChefSpec \& InSpec
   \end{itemize}
 }
 
@@ -153,20 +165,18 @@
 
 %------------------------------------------------
 
-\newcommand{\ghl}[2]{\href{https://github.com/#1}{#2}}
-
 \CVItem{Open Source Contributions}{
-  \ghl{sous-chefs}{\textbf{Sous Chefs Chef cookbooks}}
+  \href{\gh{sous-chefs}}{\textbf{Sous Chefs Chef Cookbooks}}
   \begin{itemize}
-    \item \ghl{sous-chefs/yum/pull/195}{Added \texttt{dnf\_module}
-          resource to \texttt{yum}} to manage DNF module streams
-    \item Updated \texttt{yum-remi-chef} to
-          \ghl{sous-chefs/yum-remi-chef/pull/37}{support CentOS 8} and
-          \ghl{sous-chefs/yum-remi-chef/pull/40}{DNF modules}
-    \item Refactored \ghl{sous-chefs/nfs/pull/119}{\texttt{nfs}},
-          \ghl{schubergphilis/chef-acme/pull/128}{\texttt{chef-acme}}, and
-          \ghl{djoos-cookbooks/composer/pull/81}{\texttt{composer}} cookbooks
-          to use modern Chef features and compatibility
+    \item Created \texttt{dnf\_module} resource in \texttt{yum} to manage DNF
+          module streams \hreficon{\gh{sous-chefs/yum/pull/195}}
+    \item Updated \texttt{yum-remi-chef} to support CentOS 8
+          \hreficon{\gh{sous-chefs/yum-remi-chef/pull/37}} and DNF modules
+          \hreficon{\gh{sous-chefs/yum-remi-chef/pull/40}}
+    \item Refactored \texttt{nfs} \hreficon{\gh{sous-chefs/nfs/pull/119}},
+          \texttt{chef-acme} \hreficon{\gh{schubergphilis/chef-acme/pull/128}},
+          and \texttt{composer} \hreficon{\gh{djoos-cookbooks/composer/pull/81}}
+          to use modern Chef features and test tooling
   \end{itemize}
 }
 
@@ -175,10 +185,9 @@
 \CVItem{Club Vice President \& Treasurer}{
   \href{https://lug.oregonstate.edu}{\textbf{OSU Linux Users Group}}, 2021 - 2022
   \begin{itemize}
-    \item Coordinated with club members to plan events
-    \item Performed talks on Linux-related topics
     \item Maintained club infrastructure (website, wiki, Matrix instance)
-    \item Developed deployment pipeline to automate website updates
+    \item Implemented deployment pipeline to automate website updates
+    \item Presented talks on Linux-related topics (Docker, Git, LaTeX)
   \end{itemize}
 }
 
@@ -187,9 +196,13 @@
 \CVItem{Club Member}{
   \href{https://osusec.org}{\textbf{OSU Security Club}}, 2019 - 2022
   \begin{itemize}
-    \item Set up on-demand AWS EC2 VM creation for members via Discord bot
-    \item Competed in DOE Cyberforce CDC 2021 (1st regional, 7th overall)
-    \item Competed in DEFCON CTF Qualifiers (22nd in 2020, 27th in 2021)
+    \item Developed on-demand AWS EC2 instance provisioning for members using
+          Discord bot commands
+          %\hreficon{\gl{osusec/discord-bot/-/merge_requests/53}}
+    \item Competed in DOE Cyberforce CDC (Cyber Defense Competition) 2021 \\
+          (1st place regionally, 7th nationally)
+    \item Competed in DEFCON CTF (Capture The Flag) Qualifiers \\
+          (22nd place worldwide in 2020, 27th worldwide in 2021)
     % \item Competed in NSA Codebreaker Challenge 2021 (to Task 6)
   \end{itemize}
 }
@@ -214,10 +227,11 @@
 
 %------------------------------------------------
 
-\CVItem{Software \& Tools}{
+\CVItem{Tools \& Technologies}{
   \begin{tabular}{p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth}}
-    \bluebullet Chef      & \bluebullet Linux   & \bluebullet Git       & \bluebullet GitHub \\
-    \bluebullet AWS EC2   & \bluebullet Docker  & \bluebullet OpenStack & \bluebullet HAProxy
+    \bluebullet Chef    & \bluebullet Linux     & \bluebullet Git       & \bluebullet GitHub  \\
+    \bluebullet AWS EC2 & \bluebullet Docker    & \bluebullet OpenStack & \bluebullet HAProxy \\
+    \bluebullet Jenkins & \bluebullet Iptables  & \bluebullet BIND      %& \bluebullet
   \end{tabular}
 }
 
