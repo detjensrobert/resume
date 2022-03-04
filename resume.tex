@@ -25,76 +25,6 @@
 
 \input{structure.tex} % Include the file specifying document layout and packages
 
-\usepackage{hyperref}
-\usepackage{fontawesome5}
-
-\hypersetup{
-  pdftitle={Robert Detjens's Resume},
-  pdfauthor={Robert Detjens}
-}
-
-% some QOL macros to make links easier
-\newcommand{\gh}[1]{https://github.com/#1}
-\newcommand{\gl}[1]{https://gitlab.com/#1}
-\newcommand{\hreficon}[1]{\href{#1}{(\textcolor{\accentcolor}{\tiny \faLink})}}
-% \newcommand{\ghli}[1]{\ghl{#1}{(\textcolor{\accentcolor}{link})}}
-
-
-%-------------------------------------------------------------------------------
-%  NAME AND CONTACT INFORMATION
-%-------------------------------------------------------------------------------
-
-\userinformation{ % Set the content that goes into the sidebar of each page
-  % Comment out this figure block if you don't want a photo
-  % \begin{tikzpicture}
-  %   \clip (0,0) circle (0.5\columnwidth) node
-  %   {\includegraphics[width=\columnwidth]{photo.jpg}};
-  % \end{tikzpicture}
-
-  % \includegraphics[width=\columnwidth]{photo.jpg}
-  % \\ [\baselineskip]
-
-  \begin{flushright}
-
-  % \cvheading{Robert Detjens}
-  \cvheading{Robert}
-  \cvheading{Detjens}
-
-  \cvsubheading{DevOps / Sysadmin} % Subheading - your occupation/specialization
-
-  \Sep
-
-  \textbf{Website} \faIcon{mouse-pointer} \\
-  \href{https://detjens.dev}{detjens.dev} \\
-
-  \Sep
-
-  \textbf{Email} \faIcon{envelope} \\
-  \href{mailto:robert@detjens.dev}{robert@detjens.dev} \\
-
-  \Sep
-
-  \textbf{Phone} \faIcon{phone} \\
-  925.550.8037 \\
-
-  \Sep
-
-  \textbf{Linkedin} \faIcon{linkedin} \\
-  \href{https://linkedin.com/in/detjensrobert}{detjensrobert} \\
-
-  \Sep
-
-  \textbf{GitHub} \faIcon{github} \\
-  \href{\gh{detjensrobert}}{detjensrobert} \\
-
-  \Sep
-
-  \textbf{GitLab} \faIcon{gitlab} \\
-  \href{\gl{detjensrobert}}{detjensrobert} \\
-
-  \end{flushright}
-}
-
 %-------------------------------------------------------------------------------
 
 \begin{document}
@@ -118,13 +48,16 @@
 
 %------------------------------------------------
 
-\CVItem{BS in Computer Science (Systems option)}{
-  \textbf{Oregon State University}, 2018 - 2022 \\
+\CVItem{B.S. in Computer Science}{
+  \textbf{Oregon State University}, 2018 - 2022
+}{
   3.48 GPA | Notable classes:
+
   \begin{itemize}
     \item CS 312: System Administration
     \item CS 344/444: Operating Systems I / II
     \item CS 361/362: Software Design I / II
+    \item CS 472: Computer Architecture
   \end{itemize}
 }
 
@@ -141,15 +74,16 @@
 %------------------------------------------------
 
 \CVItem{Student Systems Engineer}{
-  \href{https://osuosl.org}{\textbf{OSU Open Source Lab}}, Nov. 2019 - present
+  \href{https://osuosl.org}{\textbf{OSU Open Source Lab}}, 2019 - 2022
+}{
   \begin{itemize}
     \item Developed Chef cookbook suites to configure systems
     \item Maintained network of CentOS systems for hosting open-source projects
     % \item Racked and installed physical servers in data center
-    \item Provisioned physical infrastructure for projects using Openstack
     \item Refactored and improved internal documentation and onboarding guides
-    \item Investigated and fixed customer infrastructure problems
-    \item Developed unit and integration testing suites with ChefSpec \& InSpec
+    \item Investigated and resolved customer infrastructure problems
+    \item Coordinated with customers to ensure minimal downtime
+    \item Developed comprehensive unit and integration testing suites
   \end{itemize}
 }
 
@@ -165,8 +99,48 @@
 
 %------------------------------------------------
 
+\CVItem{Online Community Lead}{2021 - 2022}{
+  \begin{itemize}
+    \item Organized and moderated an online community of over 1500 CS students
+          at OSU during the COVID pandemic
+    \item Assisted peers in understanding complex topics
+  \end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{Club Vice President}{
+  \href{https://lug.oregonstate.edu}{\textbf{OSU Linux Users Group}}, 2021 - 2022
+}{
+  \begin{itemize}
+    \item Wrote and presented talks on Linux-related topics
+    \item Deployed containerized infrastructure (Nginx, Hugo, Matrix Synapse)
+    \item Implemented CI/CD pipeline to automate website updates
+  \end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{Club Member}{
+  \href{https://osusec.org}{\textbf{OSU Security Club}}, 2019 - 2022
+}{
+  \begin{itemize}
+    \item Designed and implemented on-demand AWS EC2 instance provisioning \\
+          and setup for members using Discord bot commands
+          \hreficon{\gl{osusec/discord-bot/-/merge_requests/53}}
+    \item Competed in DOE 2021 Cyberforce CDC (Cyber Defense Competition) \\
+          (1st place regionally, 7th nationally)
+    \item Competed in DEFCON CTF (Capture The Flag) Qualifiers \\
+          (22nd place worldwide in 2020, 27th worldwide in 2021)
+    % \item Competed in NSA Codebreaker Challenge 2021 (to Task 6)
+  \end{itemize}
+}
+
+%------------------------------------------------
+
 \CVItem{Open Source Contributions}{
   \href{\gh{sous-chefs}}{\textbf{Sous Chefs Chef Cookbooks}}
+}{
   \begin{itemize}
     \item Created \texttt{dnf\_module} resource in \texttt{yum} to manage DNF
           module streams \hreficon{\gh{sous-chefs/yum/pull/195}}
@@ -182,33 +156,6 @@
 
 %------------------------------------------------
 
-\CVItem{Club Vice President \& Treasurer}{
-  \href{https://lug.oregonstate.edu}{\textbf{OSU Linux Users Group}}, 2021 - 2022
-  \begin{itemize}
-    \item Maintained club infrastructure (website, wiki, Matrix instance)
-    \item Implemented deployment pipeline to automate website updates
-    \item Presented talks on Linux-related topics (Docker, Git, LaTeX)
-  \end{itemize}
-}
-
-%------------------------------------------------
-
-\CVItem{Club Member}{
-  \href{https://osusec.org}{\textbf{OSU Security Club}}, 2019 - 2022
-  \begin{itemize}
-    \item Developed on-demand AWS EC2 instance provisioning for members using
-          Discord bot commands
-          %\hreficon{\gl{osusec/discord-bot/-/merge_requests/53}}
-    \item Competed in DOE Cyberforce CDC (Cyber Defense Competition) 2021 \\
-          (1st place regionally, 7th nationally)
-    \item Competed in DEFCON CTF (Capture The Flag) Qualifiers \\
-          (22nd place worldwide in 2020, 27th worldwide in 2021)
-    % \item Competed in NSA Codebreaker Challenge 2021 (to Task 6)
-  \end{itemize}
-}
-
-%------------------------------------------------
-
 \Sep % Extra whitespace after the end of a major section
 
 %-------------------------------------------------------------------------------
@@ -219,30 +166,36 @@
 
 %------------------------------------------------
 
-\CVItem{Programming Languages}{
-  \begin{tabular}{p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth}}
-    \bluebullet Ruby  & \bluebullet Python  & \bluebullet Shell  & \bluebullet C
-  \end{tabular}
-}
+% \begin{tabularx}{\linewidth}{X X l}
+%   \bluebullet Independent Worker & \bluebullet Clear Communicator  & \bluebullet Problem Solver
+% \end{tabularx}
+% \\
 
 %------------------------------------------------
 
-\CVItem{Tools \& Technologies}{
-  \begin{tabular}{p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth} p{0.12\textwidth}}
-    \bluebullet Chef    & \bluebullet Linux     & \bluebullet Git       & \bluebullet GitHub  \\
-    \bluebullet AWS EC2 & \bluebullet Docker    & \bluebullet OpenStack & \bluebullet HAProxy \\
-    \bluebullet Jenkins & \bluebullet Iptables  & \bluebullet BIND      %& \bluebullet
-  \end{tabular}
-}
+\CVItemHeader{Programming Languages}
+\begin{tabularx}{\linewidth}{X X X X l}
+  \bluebullet Ruby  & \bluebullet Python  & \bluebullet Shell  & \bluebullet C  & \bluebullet JavaScript
+\end{tabularx}
+\\
 
 %------------------------------------------------
 
-% \CVItem{Linux Experience}{
-%   \begin{tabular}{p{0.6\textwidth}}
-%     \bluebullet 3 years server management (CentOS \& Ubuntu Server) \\
-%     \bluebullet 6 years desktop use (Arch Linux \& Ubuntu)
-%   \end{tabular}
-% }
+\CVItemHeader{Tools \& Technologies}
+\begin{tabularx}{\linewidth}{X X X l}
+  \bluebullet Chef    & \bluebullet Linux     & \bluebullet Git       & \bluebullet GitHub  \\
+  \bluebullet AWS EC2 & \bluebullet Docker    & \bluebullet OpenStack & \bluebullet MySQL \\
+  \bluebullet Jenkins & \bluebullet HAProxy   & \bluebullet BIND      & \bluebullet Nginx
+\end{tabularx}
+% \Sep
+
+%------------------------------------------------
+
+% \CVItemHeader{Linux Experience}
+% \begin{tabular}{l}
+%   \bluebullet 3 years server management (CentOS \& Ubuntu Server) \\
+%   \bluebullet 6 years desktop use (Arch Linux \& Ubuntu)
+% \end{tabular}
 
 %------------------------------------------------
 

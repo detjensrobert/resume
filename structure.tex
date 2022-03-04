@@ -81,14 +81,94 @@
 }
 
 \newcommand{\CVSection}[1]{ % New command for the headings within sections
-{\Large\textbf{#1}}\par
-\SmallSep % Used for spacing
+  {\Large\textbf{#1}}\par
+  \SmallSep % Used for spacing
 }
 
-\newcommand{\CVItem}[2]{ % New command for the item descriptions
-\textbf{\color{\accentcolor} #1}\par
-#2
-\SmallSep % Used for spacing
+\newcommand{\CVItemHeader}[1]{\textbf{\color{\accentcolor} \large #1} \par}
+
+\newcommand{\CVItem}[3]{ % New command for the item descriptions
+  \textbf{\color{\accentcolor} \large #1}, #2
+  \par
+  #3
+  \SmallSep % Used for spacing
 }
+
+% \newcommand{\CVItem}[2]{ % New command for the item descriptions
+%   \textbf{\color{\accentcolor} \large #1}\par
+%   #2
+%   \SmallSep % Used for spacing
+% }
 
 \newcommand{\bluebullet}{\textcolor{\accentcolor}{$\circ$}~~} % New command for the blue bullets
+
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+
+\hypersetup{
+  pdftitle={Robert Detjens's Resume},
+  pdfauthor={Robert Detjens}
+}
+
+% some QOL macros to make links easier
+\newcommand{\gh}[1]{https://github.com/#1}
+\newcommand{\gl}[1]{https://gitlab.com/#1}
+\newcommand{\hreficon}[1]{\href{#1}{(\textcolor{\accentcolor}{\tiny \faLink})}}
+% \newcommand{\ghli}[1]{\ghl{#1}{(\textcolor{\accentcolor}{link})}}
+
+
+%-------------------------------------------------------------------------------
+%  NAME AND CONTACT INFORMATION
+%-------------------------------------------------------------------------------
+
+\userinformation{ % Set the content that goes into the sidebar of each page
+  % Comment out this figure block if you don't want a photo
+  % \begin{tikzpicture}
+  %   \clip (0,0) circle (0.5\columnwidth) node
+  %   {\includegraphics[width=\columnwidth]{photo.jpg}};
+  % \end{tikzpicture}
+
+  % \includegraphics[width=\columnwidth]{photo.jpg}
+  % \\ [\baselineskip]
+
+  \begin{flushright}
+
+  % \cvheading{Robert Detjens}
+  \cvheading{Robert}
+  \cvheading{Detjens}
+
+  \cvsubheading{DevOps / Sysadmin} % Subheading - your occupation/specialization
+
+  \Sep
+
+  \textbf{Website} \faIcon{mouse-pointer} \\
+  \href{https://detjens.dev}{detjens.dev} \\
+
+  \Sep
+
+  \textbf{Email} \faIcon{envelope} \\
+  \href{mailto:robert@detjens.dev}{robert@detjens.dev} \\
+
+  \Sep
+
+  \textbf{Phone} \faIcon{phone} \\
+  925.550.8037 \\
+
+  \Sep
+
+  \textbf{Linkedin} \faIcon{linkedin} \\
+  \href{https://linkedin.com/in/detjensrobert}{detjensrobert} \\
+
+  \Sep
+
+  \textbf{GitHub} \faIcon{github} \\
+  \href{\gh{detjensrobert}}{detjensrobert} \\
+
+  \Sep
+
+  \textbf{GitLab} \faIcon{gitlab} \\
+  \href{\gl{detjensrobert}}{detjensrobert} \\
+
+  \end{flushright}
+}
