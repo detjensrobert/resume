@@ -1,7 +1,7 @@
 resume: resume.pdf
 
 .PHONY:
-resume.pdf: resume.tex
+resume.pdf: resume.tex structure.tex
 	latexrun resume.tex
 
 .PHONY:
