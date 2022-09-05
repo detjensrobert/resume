@@ -19,7 +19,7 @@
 %  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %-------------------------------------------------------------------------------
 
-\documentclass[11pt]{article} % Font and paper size
+\documentclass[10pt]{article} % Font and paper size
 
 \newcommand{\accentcolor}{RoyalBlue}
 
@@ -41,32 +41,6 @@
 % \cvsubheading{DevOps / Sysadmin} % Subheading - your occupation/specialization
 
 %-------------------------------------------------------------------------------
-%  EDUCATION
-%-------------------------------------------------------------------------------
-
-\CVSection{Education}
-
-%------------------------------------------------
-
-\CVItem{B.S. in Computer Science}{
-  \textbf{Oregon State University}, 2018 - 2022
-}{
-  % Systems focus
-  % 3.48 GPA | Notable classes:
-
-  % \begin{itemize}
-  %   \item CS 312: System Administration
-  %   \item CS 344/444: Operating Systems I / II
-  %   \item CS 361/362: Software Design I / II
-  %   \item CS 472: Computer Architecture
-  % \end{itemize}
-}
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
-
-%-------------------------------------------------------------------------------
 %  EXPERIENCE
 %-------------------------------------------------------------------------------
 
@@ -78,10 +52,11 @@
   \href{https://onecommons.org}{\textbf{OneCommons}}, 2022 - present
 }{
   \begin{itemize}
-    \item Managed cloud-native Gitlab instance in GKE Kubernetes
+    \item Maintained cloud-native Gitlab instance in GKE Kubernetes
     \item Managed IAM roles and policies across AWS and GCP
-    \item Deployed Grafana monitoring and custom metrics
+    \item Improved internal monitoring with custom Grafana dashboards
     \item Implemented new page backends in Rails 6
+    \item Improved caching and refactored technical debt
   \end{itemize}
 }
 
@@ -97,10 +72,6 @@
     \item Developed comprehensive unit and integration testing suites
   \end{itemize}
 }
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
 
 %-------------------------------------------------------------------------------
 %  EXTRACURRICULARS
@@ -122,18 +93,18 @@
 
 %------------------------------------------------
 
-\CVItem{Club Member}{
-  \href{https://osusec.org}{\textbf{OSU Security Club}}, 2019 - 2022
-}{
-  \begin{itemize}
-    \item 5th place, 2022 National Collegiate CDC (Cyber Defense Competition)
-    \item 1st place, 2022 Pacific Rim Collegiate CDC
-    \item 1st place regionally, 7th nationally in 2021 DoE Cyberforce CDC
-    \item Designed and implemented on-demand AWS EC2 provisioning and setup \\
-          for members using Discord bot commands
-          \hreficon{\gl{osusec/discord-bot/-/merge_requests/53}}
-  \end{itemize}
-}
+% \CVItem{Club Member}{
+%   \href{https://osusec.org}{\textbf{OSU Security Club}}, 2019 - 2022
+% }{
+%   \begin{itemize}
+%     \item 5th place, 2022 National Collegiate CDC (Cyber Defense Competition)
+%     \item 1st place, 2022 Pacific Rim Collegiate CDC
+%     \item 1st place regionally, 7th nationally in 2021 DoE Cyberforce CDC
+%     \item Designed and implemented on-demand AWS EC2 provisioning and setup \\
+%           for members using Discord bot commands
+%           \hreficon{\gl{osusec/discord-bot/-/merge_requests/53}}
+%   \end{itemize}
+% }
 
 %------------------------------------------------
 
@@ -148,30 +119,27 @@
 %------------------------------------------------
 
 \CVItem{Open Source Contributions}{
-  \href{\gh{sous-chefs}}{\textbf{Chef Community Cookbooks}}
+  % \href{\gh{sous-chefs}}{\textbf{Chef Community Cookbooks}}
+  \textbf{Chef Community Cookbooks}
 }{
   \begin{itemize}
-    \item Created \texttt{dnf\_module} resource in \texttt{yum} to manage DNF
-          module streams \hreficon{\gh{sous-chefs/yum/pull/195}}
+    \item Created \texttt{dnf\_module} resource in \texttt{yum} cookbook to
+          manage DNF modules \hreficon{\gh{sous-chefs/yum/pull/195}}
     \item Updated \texttt{yum-remi-chef} to support CentOS 8
           \hreficon{\gh{sous-chefs/yum-remi-chef/pull/37}} and DNF modules
           \hreficon{\gh{sous-chefs/yum-remi-chef/pull/40}}
     \item Refactored \texttt{nfs} \hreficon{\gh{sous-chefs/nfs/pull/119}},
           \texttt{chef-acme} \hreficon{\gh{schubergphilis/chef-acme/pull/128}},
           and \texttt{composer} \hreficon{\gh{djoos-cookbooks/composer/pull/81}}
-          to use modern Chef features and test tooling
+          cookbooks to use modern Chef features and test tooling
     \item Refactored and merged \texttt{selinux} and \texttt{selinux-policy}
           cookbooks with improved resources and tests
           \hreficon{\gh{sous-chefs/selinux/pull/79}}
-    \item Maintainer of \texttt{flatpak} cookbook
+    \item Creator and maintainer of \texttt{flatpak} cookbook
           \hreficon{\gh{detjensrobert/flatpak-cookbook}} for managing Flatpak
-          remotes and applications
+          applications
   \end{itemize}
 }
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
 
 %-------------------------------------------------------------------------------
 %  SKILLS
@@ -198,21 +166,57 @@
 %------------------------------------------------
 
 \CVItemHeader{Tools \& Technologies}
-\begin{tabularx}{\linewidth}{X X X l}
-  \bluebullet Chef    & \bluebullet Linux   & \bluebullet Git         & \bluebullet GitHub  \\
-  \bluebullet AWS EC2 & \bluebullet GCP GKE & \bluebullet Kubernetes  & \bluebullet Docker  \\
-  \bluebullet Jenkins & \bluebullet HAProxy & \bluebullet BIND        & \bluebullet Nginx
+\begin{tabularx}{\linewidth}{X X X X l}
+  \bluebullet Chef    & \bluebullet Linux   & \bluebullet Git         & \bluebullet GitHub  & \bluebullet Rails \\
+  \bluebullet AWS EC2 & \bluebullet GCP GKE & \bluebullet Kubernetes  & \bluebullet Docker  & \bluebullet Agile
 \end{tabularx}
+
 \Sep
 
 %------------------------------------------------
 
 \CVItemHeader{Linux Experience}
 \begin{tabular}{l}
-  \bluebullet 4 years server management (CentOS, Ubuntu Server) \\
-  \bluebullet 7 years desktop use (Arch, Fedora, Ubuntu)
+  \bluebullet 4 years server management (RHEL / CentOS, Ubuntu Server) \\
+  \bluebullet 8 years desktop use (Arch, Fedora, Ubuntu)
 \end{tabular}
 
+
+%-------------------------------------------------------------------------------
+%  Awards
+%-------------------------------------------------------------------------------
+
+\CVSection{Awards}
+
 %------------------------------------------------
+
+\CVItemHeader{OSU Security Club}
+\begin{tabular}{l}
+  \bluebullet 5th place, 2022 National Collegiate CDC (Cyber Defense Competition) \\
+  \bluebullet 1st place, 2022 Pacific Rim Collegiate CDC \\
+  \bluebullet 1st place regionally, 7th nationally in 2021 DoE Cyberforce CDC \\
+\end{tabular}
+
+%-------------------------------------------------------------------------------
+%  EDUCATION
+%-------------------------------------------------------------------------------
+
+\CVSection{Education}
+
+%------------------------------------------------
+
+\CVItem{B.S. in Computer Science}{
+  \textbf{Oregon State University}, 2018 - 2022
+}{
+  Systems focus | 3.48 GPA
+  % Notable classes:
+  % \begin{itemize}
+  %   \item CS 312: System Administration
+  %   \item CS 344/444: Operating Systems I / II
+  %   \item CS 361/362: Software Design I / II
+  %   \item CS 472: Computer Architecture
+  % \end{itemize}
+}
+
 
 \end{document}

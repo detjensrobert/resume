@@ -22,7 +22,7 @@
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 
-\usepackage[top=1.5cm,left=1cm,right=1.5cm,bottom=1.5cm]{geometry} % Modify margins
+\usepackage[top=1.5cm,left=1cm,right=1cm,bottom=1.5cm]{geometry} % Modify margins
 
 \usepackage{graphicx} % Required for figures
 
@@ -81,15 +81,16 @@
 }
 
 \newcommand{\CVSection}[1]{ % New command for the headings within sections
+  \Sep \SmallSep
   {\Large\textbf{#1}}\par
-  \SmallSep % Used for spacing
+  \Sep % Used for spacing
 }
 
-\newcommand{\CVItemHeader}[1]{\textbf{\color{\accentcolor} \large #1} \par}
+\newcommand{\CVItemHeader}[1]{\textbf{\color{\accentcolor} \large #1} \par \vspace{0.2em} }
 
 \newcommand{\CVItem}[3]{ % New command for the item descriptions
   \textbf{\color{\accentcolor} \large #1}, #2
-  \par
+  \par \vspace{0.2em}
   #3
   \SmallSep % Used for spacing
 }
