@@ -49,33 +49,36 @@
 %------------------------------------------------
 
 \CVItem{DevOps Engineer}{
-  \href{https://onecommons.org}{\textbf{OneCommons}} \hfill {\it May 2022 - present}
+  \href{https://onecommons.org}{\textbf{OneCommons}}
+  \hfill {\it 2022 - present}
 }{
   \begin{itemize}
     \item Maintained cloud-native Gitlab deployment in GCP Kubernetes Engine
     \item Managed IAM roles and policies across AWS and GCP to allow safe access to \\
           computing resources across projects
-    \item Secured and improved internal Gitlab Runner configuration by implementing secure, \\
-          rootless container access within jobs
+    \item Improved internal Gitlab Runner configuration by implementing secure rootless \\
+          container access within jobs
     \item Improved internal monitoring with custom Grafana dashboards
-    \item Implemented new page backends in Rails 6
+    \item Implemented backend and frontend for new pages in Ruby on Rails \& HAML
     \item Improved caching and refactored technical debt
     \item Created tests and deployment pipeline for internal projects
   \end{itemize}
 }
 
 \SmallSep
-\CVItem{Student Systems Engineer}{
-  \href{https://osuosl.org}{\textbf{OSU Open Source Lab}} \hfill {\it Nov. 2019 - April 2022}
+
+\CVItem{Systems Engineer}{
+  \href{https://osuosl.org}{\textbf{OSU Open Source Lab}}
+  \hfill {\it 2019 - 2022}
 }{
   \begin{itemize}
-    \item Developed configuration management suites to configure systems
+    \item Developed configuration management suites to maintain multi-arch Linux server fleet
     \item Streamlined internal development workflow with custom resources
     \item Refactored and improved internal documentation and onboarding guides
-    \item Maintained on-premise multi-arch fleet of Linux servers and Jenkins pipelines
+    \item Modernized or replaced legacy software packages
+    \item Developed comprehensive unit and integration testing suites
     \item Investigated and resolved customer infrastructure problems
     % \item Installed and serviced servers in on-premise data center
-    \item Developed comprehensive unit and integration testing suites
   \end{itemize}
 }
 
@@ -83,12 +86,37 @@
 %  EXTRACURRICULARS
 %-------------------------------------------------------------------------------
 
-\CVSection{Extracurriculars}
+\SmallSep
+% \CVSection{Extracurriculars}
 
 %------------------------------------------------
 
+\CVItem{Open Source Contributions}{
+  % \href{\gh{sous-chefs}}{\textbf{Chef Community Cookbooks}}
+  \textbf{Chef Community Cookbooks}
+  \hfill {\it 2019 - 2022}
+}{
+  \begin{itemize}
+    \item Created \texttt{dnf\_module} resource in \texttt{yum} cookbook to manage DNF modules
+          \hreficon{\gh{sous-chefs/yum/pull/195}}
+    \item Updated \texttt{yum-remi-chef} to support CentOS 8 \hreficon{\gh{sous-chefs/yum-remi-chef/pull/37}} and DNF
+          modules \hreficon{\gh{sous-chefs/yum-remi-chef/pull/40}}
+    \item Refactored \texttt{nfs} \hreficon{\gh{sous-chefs/nfs/pull/119}}, \texttt{chef-acme}
+          \hreficon{\gh{schubergphilis/chef-acme/pull/128}}, and \texttt{composer}
+          \hreficon{\gh{djoos-cookbooks/composer/pull/81}} cookbooks to use modern Chef features and test tooling
+    \item Refactored and merged \texttt{selinux} and \texttt{selinux-policy} cookbooks with improved resources and tests
+          \hreficon{\gh{sous-chefs/selinux/pull/79}}
+    \item Creator and maintainer of \texttt{flatpak} cookbook \hreficon{\gh{detjensrobert/flatpak-cookbook}} for
+          managing Flatpak applications
+  \end{itemize}
+}
+
+%------------------------------------------------
+\SmallSep
+
 \CVItem{Club Vice President}{
-  \href{https://lug.oregonstate.edu}{\textbf{OSU Linux Users Group}} \hfill {\it 2021 - 2022}
+  \href{https://lug.oregonstate.edu}{\textbf{OSU Linux Users Group}}
+  \hfill {\it 2021 - 2022}
 }{
   \begin{itemize}
     \item Wrote and presented talks on several Linux-related topics
@@ -116,36 +144,15 @@
 %------------------------------------------------
 
 % \Sep
-% \CVItem{Online Community Lead}{\hfill {\it 2021 - 2022}}{
+% \CVItem{Online Community Lead}{
+%   \hfill {\it 2021 - 2022}
+% }{
 %  \begin{itemize}
 %    \item Organized and moderated an online community of over 1500 CS students
 %          at OSU during the COVID pandemic
 %    \item Assisted peers in understanding complex topics
 %  \end{itemize}
-%}
-
-%------------------------------------------------
-
-% \Sep
-\SmallSep
-\CVItem{Open Source Contributions}{
-  % \href{\gh{sous-chefs}}{\textbf{Chef Community Cookbooks}}
-  \textbf{Chef Community Cookbooks}
-}{
-  \begin{itemize}
-    \item Created \texttt{dnf\_module} resource in \texttt{yum} cookbook to manage DNF modules
-          \hreficon{\gh{sous-chefs/yum/pull/195}}
-    \item Updated \texttt{yum-remi-chef} to support CentOS 8 \hreficon{\gh{sous-chefs/yum-remi-chef/pull/37}} and DNF
-          modules \hreficon{\gh{sous-chefs/yum-remi-chef/pull/40}}
-    \item Refactored \texttt{nfs} \hreficon{\gh{sous-chefs/nfs/pull/119}}, \texttt{chef-acme}
-          \hreficon{\gh{schubergphilis/chef-acme/pull/128}}, and \texttt{composer}
-          \hreficon{\gh{djoos-cookbooks/composer/pull/81}} cookbooks to use modern Chef features and test tooling
-    \item Refactored and merged \texttt{selinux} and \texttt{selinux-policy} cookbooks with improved resources and tests
-          \hreficon{\gh{sous-chefs/selinux/pull/79}}
-    \item Creator and maintainer of \texttt{flatpak} cookbook \hreficon{\gh{detjensrobert/flatpak-cookbook}} for
-          managing Flatpak applications
-  \end{itemize}
-}
+% }
 
 %-------------------------------------------------------------------------------
 %  SKILLS
@@ -164,30 +171,26 @@
 
 \CVItemHeader{Programming Languages}
 \begin{tabularx}{\linewidth}{l l l l l}
-  \bluebullet Ruby   & \bluebullet Python       & \bluebullet C/C++   & \bluebullet Shell (Bash) \\
-  \bluebullet NodeJS & \bluebullet HTML/CSS/JS  & \bluebullet \LaTeX  & \bluebullet SQL
+  \bluebullet Ruby   & \bluebullet Python       & \bluebullet C/C++   & \bluebullet Shell (Bash)  & \bluebullet \LaTeX \\
+  \bluebullet NodeJS & \bluebullet HTML/CSS/JS  & \bluebullet SQL
 \end{tabularx}
 
 \SmallSep
 
-%------------------------------------------------
-
 \CVItemHeader{Tools \& Technologies}
 \begin{tabularx}{\linewidth}{l l l l l}
-  \bluebullet Chef    & \bluebullet Rails   & \bluebullet Git   & \bluebullet GitHub      & \bluebullet Linux (all distros) \\
-  \bluebullet AWS EC2 & \bluebullet GCP GKE & \bluebullet Azure & \bluebullet Kubernetes  & \bluebullet Containers \\
-  \bluebullet Jenkins & \bluebullet GitHub Actions & \multicolumn{2}{l}{ \bluebullet Computer Hardware } & \bluebullet Pandoc \\
+  \bluebullet Chef    & \bluebullet Ruby on Rails   & \bluebullet Git       & \bluebullet GitHub      & \bluebullet Linux \\
+  \bluebullet AWS EC2 & \bluebullet GCP GKE         & \bluebullet Azure     & \bluebullet Kubernetes  & \bluebullet Docker \& Podman \\
+  \bluebullet Jenkins & \bluebullet GitHub Actions  & \bluebullet GitLab CI & \bluebullet Hardware    & \bluebullet Pandoc \\
 \end{tabularx}
 
-% \SmallSep
+\SmallSep
 
-%------------------------------------------------
-
-% \CVItemHeader{Linux Experience}
-% \begin{tabular}{l}
-%   \bluebullet 4 years server management (RHEL / CentOS, Ubuntu Server) \\
-%   \bluebullet 8 years desktop use (Arch, Fedora, Ubuntu)
-% \end{tabular}
+\CVItemHeader{Linux Experience}
+\begin{tabular}{l}
+  \bluebullet 5 years server management (CentOS/Rocky/Alma, Ubuntu Server) \\
+  \bluebullet 9 years desktop use (Arch, Fedora, Ubuntu)
+\end{tabular}
 
 
 %-------------------------------------------------------------------------------
@@ -214,9 +217,10 @@
 %------------------------------------------------
 
 \CVItem{B.S. in Computer Science}{
-  \textbf{Oregon State University}, 2018 - 2022
+  \textbf{Oregon State University}
+  \hfill {\it 2018 - 2022}
 }{
-  Computer Systems focus | 3.48 GPA
+  % Computer Systems focus | 3.48 GPA
   % Notable classes:
   % \begin{itemize}
   %   \item CS 312: System Administration
