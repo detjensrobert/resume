@@ -52,24 +52,29 @@
   \href{https://onecommons.org}{\textbf{OneCommons}}, May 2022 - present
 }{
   \begin{itemize}
-    \item Maintained cloud-native Gitlab instance in GKE Kubernetes
-    \item Managed IAM roles and policies across AWS and GCP
+    \item Maintained cloud-native Gitlab deployment in GCP Kubernetes Engine
+    \item Managed IAM roles and policies across AWS and GCP to allow safe access to \\
+          computing resources across projects
+    \item Secured and improved internal Gitlab Runner configuration by implementing secure, \\
+          rootless container access within jobs
     \item Improved internal monitoring with custom Grafana dashboards
     \item Implemented new page backends in Rails 6
     \item Improved caching and refactored technical debt
+    \item Created tests and deployment pipeline for internal projects
   \end{itemize}
 }
 
-\Sep
+\SmallSep
 \CVItem{Student Systems Engineer}{
   \href{https://osuosl.org}{\textbf{OSU Open Source Lab}}, Nov. 2019 - April 2022
 }{
   \begin{itemize}
     \item Developed configuration management suites to configure systems
-    \item Maintained on-premise multi-arch fleet of Linux servers
+    \item Streamlined internal development workflow with custom resources
     \item Refactored and improved internal documentation and onboarding guides
+    \item Maintained on-premise multi-arch fleet of Linux servers and Jenkins pipelines
     \item Investigated and resolved customer infrastructure problems
-    \item Installed and serviced servers in on-premise data center
+    % \item Installed and serviced servers in on-premise data center
     \item Developed comprehensive unit and integration testing suites
   \end{itemize}
 }
@@ -86,7 +91,7 @@
   \href{https://lug.oregonstate.edu}{\textbf{OSU Linux Users Group}}, 2021 - 2022
 }{
   \begin{itemize}
-    \item Wrote and presented talks on Linux-related topics
+    \item Wrote and presented talks on several Linux-related topics
     \item Maintained containerized infrastructure (Nginx, Hugo, Matrix Synapse)
     % \item Implemented CI/CD pipeline to automate website updates
   \end{itemize}
@@ -122,26 +127,23 @@
 %------------------------------------------------
 
 % \Sep
+\SmallSep
 \CVItem{Open Source Contributions}{
   % \href{\gh{sous-chefs}}{\textbf{Chef Community Cookbooks}}
   \textbf{Chef Community Cookbooks}
 }{
   \begin{itemize}
-    \item Created \texttt{dnf\_module} resource in \texttt{yum} cookbook to
-          manage DNF modules \hreficon{\gh{sous-chefs/yum/pull/195}}
-    \item Updated \texttt{yum-remi-chef} to support CentOS 8
-          \hreficon{\gh{sous-chefs/yum-remi-chef/pull/37}} and DNF modules
-          \hreficon{\gh{sous-chefs/yum-remi-chef/pull/40}}
-    \item Refactored \texttt{nfs} \hreficon{\gh{sous-chefs/nfs/pull/119}},
-          \texttt{chef-acme} \hreficon{\gh{schubergphilis/chef-acme/pull/128}},
-          and \texttt{composer} \hreficon{\gh{djoos-cookbooks/composer/pull/81}}
-          cookbooks to use modern Chef features and test tooling
-    \item Refactored and merged \texttt{selinux} and \texttt{selinux-policy}
-          cookbooks with improved resources and tests
+    \item Created \texttt{dnf\_module} resource in \texttt{yum} cookbook to manage DNF modules
+          \hreficon{\gh{sous-chefs/yum/pull/195}}
+    \item Updated \texttt{yum-remi-chef} to support CentOS 8 \hreficon{\gh{sous-chefs/yum-remi-chef/pull/37}} and DNF
+          modules \hreficon{\gh{sous-chefs/yum-remi-chef/pull/40}}
+    \item Refactored \texttt{nfs} \hreficon{\gh{sous-chefs/nfs/pull/119}}, \texttt{chef-acme}
+          \hreficon{\gh{schubergphilis/chef-acme/pull/128}}, and \texttt{composer}
+          \hreficon{\gh{djoos-cookbooks/composer/pull/81}} cookbooks to use modern Chef features and test tooling
+    \item Refactored and merged \texttt{selinux} and \texttt{selinux-policy} cookbooks with improved resources and tests
           \hreficon{\gh{sous-chefs/selinux/pull/79}}
-    \item Creator and maintainer of \texttt{flatpak} cookbook
-          \hreficon{\gh{detjensrobert/flatpak-cookbook}} for managing Flatpak
-          applications
+    \item Creator and maintainer of \texttt{flatpak} cookbook \hreficon{\gh{detjensrobert/flatpak-cookbook}} for
+          managing Flatpak applications
   \end{itemize}
 }
 
@@ -161,29 +163,31 @@
 %------------------------------------------------
 
 \CVItemHeader{Programming Languages}
-\begin{tabularx}{\linewidth}{X X X X l}
-  \bluebullet Ruby  & \bluebullet Python  & \bluebullet Shell  & \bluebullet C  & \bluebullet JavaScript
+\begin{tabularx}{\linewidth}{l l l l l}
+  \bluebullet Ruby   & \bluebullet Python       & \bluebullet C/C++   & \bluebullet Shell (Bash) \\
+  \bluebullet NodeJS & \bluebullet HTML/CSS/JS  & \bluebullet \LaTeX  & \bluebullet SQL
 \end{tabularx}
 
-\Sep
+\SmallSep
 
 %------------------------------------------------
 
 \CVItemHeader{Tools \& Technologies}
-\begin{tabularx}{\linewidth}{X X X X l}
-  \bluebullet Chef    & \bluebullet Linux   & \bluebullet Git         & \bluebullet GitHub  & \bluebullet Rails \\
-  \bluebullet AWS EC2 & \bluebullet GCP GKE & \bluebullet Kubernetes  & \bluebullet Docker  & \bluebullet Hardware
+\begin{tabularx}{\linewidth}{l l l l l}
+  \bluebullet Chef    & \bluebullet Rails   & \bluebullet Git   & \bluebullet GitHub      & \bluebullet Linux (all distros) \\
+  \bluebullet AWS EC2 & \bluebullet GCP GKE & \bluebullet Azure & \bluebullet Kubernetes  & \bluebullet Containers \\
+  \bluebullet Jenkins & \bluebullet GitHub Actions & \multicolumn{2}{l}{ \bluebullet Computer Hardware } & \bluebullet Pandoc \\
 \end{tabularx}
 
-\Sep
+% \SmallSep
 
 %------------------------------------------------
 
-\CVItemHeader{Linux Experience}
-\begin{tabular}{l}
-  \bluebullet 4 years server management (RHEL / CentOS, Ubuntu Server) \\
-  \bluebullet 8 years desktop use (Arch, Fedora, Ubuntu)
-\end{tabular}
+% \CVItemHeader{Linux Experience}
+% \begin{tabular}{l}
+%   \bluebullet 4 years server management (RHEL / CentOS, Ubuntu Server) \\
+%   \bluebullet 8 years desktop use (Arch, Fedora, Ubuntu)
+% \end{tabular}
 
 
 %-------------------------------------------------------------------------------
