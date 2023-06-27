@@ -19,17 +19,17 @@
 %  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %-------------------------------------------------------------------------------
 
-\documentclass[10pt]{article} % Font and paper size
+\documentclass[10pt]{article}
 
 \newcommand{\accentcolor}{RoyalBlue}
 
-\input{structure.tex} % Include the file specifying document layout and packages
+\input{structure.tex} % layout and packages
 
 %-------------------------------------------------------------------------------
 
 \begin{document}
 
-\userinformation % Print your information in the left column
+\userinformation
 
 \framebreak % End of the first column
 
@@ -37,8 +37,8 @@
 %  HEADING
 %-------------------------------------------------------------------------------
 
-% \cvheading{Robert Detjens} % Large heading - your name
-% \cvsubheading{DevOps / Sysadmin} % Subheading - your occupation/specialization
+% \cvheading{Robert Detjens}
+% \cvsubheading{DevOps / Sysadmin}
 
 %-------------------------------------------------------------------------------
 %  EXPERIENCE
@@ -50,18 +50,18 @@
 
 \CVItem{DevOps Engineer}{
   \href{https://onecommons.org}{\textbf{OneCommons}}
-  \hfill {\it 2022 - present}
+  \hfill \textit{2022 - present}
 }{
   \begin{itemize}
-    \item Maintained cloud-native Gitlab deployment in GCP Kubernetes Engine
+    \item Maintained cloud-native public Gitlab deployment in GKE and RKE2 on Azure
     \item Managed IAM roles and policies across AWS and GCP to allow safe access to \\
           computing resources across projects
     \item Improved internal Gitlab Runner configuration by implementing secure rootless \\
           container access within jobs
     \item Improved internal monitoring with custom Grafana dashboards
-    \item Implemented backend and frontend for new pages in Ruby on Rails \& HAML
-    \item Improved caching and refactored technical debt
+    \item Improved caching and refactored technical debt to speed up builds by 30\%
     \item Created tests and deployment pipeline for internal projects
+    \item Designed self-hosted RKE2 K8S cluster deployment architecture on Azure VMs
   \end{itemize}
 }
 
@@ -69,7 +69,7 @@
 
 \CVItem{Systems Engineer}{
   \href{https://osuosl.org}{\textbf{OSU Open Source Lab}}
-  \hfill {\it 2019 - 2022}
+  \hfill \textit{2019 - 2022}
 }{
   \begin{itemize}
     \item Developed configuration management suites to maintain multi-arch Linux server fleet
@@ -94,7 +94,7 @@
 \CVItem{Open Source Contributions}{
   % \href{\gh{sous-chefs}}{\textbf{Chef Community Cookbooks}}
   \textbf{Chef Community Cookbooks}
-  \hfill {\it 2019 - 2022}
+  \hfill \textit{2019 - 2022}
 }{
   \begin{itemize}
     \item Created \texttt{dnf\_module} resource in \texttt{yum} cookbook to manage DNF modules
@@ -116,7 +116,7 @@
 
 \CVItem{Club Vice President}{
   \href{https://lug.oregonstate.edu}{\textbf{OSU Linux Users Group}}
-  \hfill {\it 2021 - 2022}
+  \hfill \textit{2021 - 2022}
 }{
   \begin{itemize}
     \item Wrote and presented talks on several Linux-related topics
@@ -129,7 +129,7 @@
 
 % \Sep
 % \CVItem{Club Member}{
-%   \href{https://osusec.org}{\textbf{OSU Security Club}} \hfill {\it 2019 - 2022}
+%   \href{https://osusec.org}{\textbf{OSU Security Club}} \hfill \textit{2019 - 2022}
 % }{
 %   \begin{itemize}
 %     \item 5th place, 2022 National Collegiate CDC (Cyber Defense Competition)
@@ -145,7 +145,7 @@
 
 % \Sep
 % \CVItem{Online Community Lead}{
-%   \hfill {\it 2021 - 2022}
+%   \hfill \textit{2021 - 2022}
 % }{
 %  \begin{itemize}
 %    \item Organized and moderated an online community of over 1500 CS students
@@ -175,7 +175,7 @@
   \bluebullet NodeJS & \bluebullet HTML/CSS/JS  & \bluebullet SQL
 \end{tabularx}
 
-\SmallSep
+% \SmallSep
 
 \CVItemHeader{Tools \& Technologies}
 \begin{tabularx}{\linewidth}{l l l l l}
@@ -218,7 +218,7 @@
 
 \CVItem{B.S. in Computer Science}{
   \textbf{Oregon State University}
-  \hfill {\it 2018 - 2022}
+  \hfill \textit{2018 - 2022}
 }{
   % Computer Systems focus | 3.48 GPA
   % Notable classes:

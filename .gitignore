@@ -1,3 +1,13 @@
 latex.out/
 texout/
+out/
 *.pdf
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+cover-letters/

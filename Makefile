@@ -6,7 +6,7 @@ resume.pdf: resume.tex structure.tex
 
 .PHONY:
 cover-letters/%: cover-letters/%.tex
-	latexrun $@.tex
+	latexrun $@.tex -o $@.pdf
 
 .PHONY:
 clean:
