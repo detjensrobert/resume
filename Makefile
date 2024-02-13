@@ -1,13 +1,18 @@
 resume: resume.pdf
 
+# LATEX=latexrun
+LATEX = docker run --rm -it \
+				-v $(PWD):/data:z -w /data \
+				dxjoke/tectonic-docker tectonic
+
 .PHONY:
 resume.pdf: resume.tex structure.tex
-	latexrun resume.tex
+	$(LATEX) resume.tex
 
 .PHONY:
 cover-letters/%: cover-letters/%.tex
-	latexrun $@.tex -o $@.pdf
+	$(LATEX) $@.tex -o $@.pdf
 
 .PHONY:
 clean:
-	latexrun --clean-all
+	$(LATEX) --clean-all
