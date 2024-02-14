@@ -11,7 +11,7 @@ resume.pdf: resume.tex structure.tex
 
 .PHONY:
 cover-letters/%: cover-letters/%.tex
-	$(LATEX) $@.tex -o $@.pdf
+	$(LATEX) $@.tex
 
 .PHONY:
 clean:
